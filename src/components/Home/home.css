@@ -89,3 +89,41 @@
   font-size: var(--smaller-font-size);
   transform: rotate(-90deg);
 }
+
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For small devices */
+@media (width <=320px) {
+  .home__buttons {
+      flex-direction: column;
+    }
+    .home__handle {
+      width: 170px;
+      height: 225px;
+    }
+    .home__img {
+      width: 200px;
+    }
+  }
+
+  /* For large devices */
+@media (width >= 992px) {
+  .home__handle {
+    width: 300px;
+    height: 400px;
+  }
+  .home__img {
+    width: 300px;
+  }
+  .home__social-link {
+    padding: 0.4rem;
+    font-size: 1.25rem;
+  }
+  .home__social::after {
+    transform: rotate(90deg) translate(16px, 0);
+  }
+  .home__scroll-icon {
+    font-size: 2rem;
+  }
+}
+  

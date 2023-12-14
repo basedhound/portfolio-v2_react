@@ -28,15 +28,27 @@
 .footer__social-link {
   background-color: var(--body-color);
   color: var(--first-color);
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
   display: inline-flex;
 }
 .footer__copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 2rem;
   color: var(--container-color);
   text-align: center;
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For large devices */
+@media (width >= 1582px) {
+  .footer__social-link {
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
 }

@@ -11,9 +11,9 @@ import "./styles.css";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-      <main class="main">
+      <main className="main">
         <Home />
         <About />
         <Skills />
@@ -23,7 +23,7 @@ const App = () => {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

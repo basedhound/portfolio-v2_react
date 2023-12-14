@@ -31,8 +31,11 @@
   border-radius: 4rem;
   padding: 1rem 2.25rem;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   transition: 0.4s;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 .nav__list {
   display: flex;
@@ -49,7 +52,11 @@
 
 /* Active link */
 .active-link {
-  background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig), 0.2));
+  background: linear-gradient(
+    180deg,
+    hsla(var(--first-hue), var(--sat), var(--lig), 1),
+    hsla(var(--first-hue), var(--sat), var(--lig), 0.2)
+  );
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), 0.4);
   color: var(--title-color);
 }
@@ -59,3 +66,28 @@
   box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
 }
 
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For small devices */
+@media (width <= 320px) {
+  .nav__menu {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* For medium devices */
+@media (width >= 576px) {
+  .nav__menu {
+    width: 330px;
+    /* left: 0;
+    right: 0;
+    margin: 0 auto; */
+  }
+}
+
+/* For large devices */
+@media (width >= 992px) {
+  .nav {
+    height: calc(var(--header-height) + 1rem);
+  }
+}

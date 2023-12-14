@@ -35,3 +35,52 @@
 .about__description {
   margin-bottom: 2rem;
 }
+
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For small devices */
+@media (width <=320px) {
+  .about__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  }
+
+
+/* For medium devices */
+@media (width >= 576px) {  
+    .about__info {
+      grid-template-columns: repeat(3, 140px);
+      justify-content: center;
+    }
+    .about__description {
+      padding: 0 5rem;
+    }  
+}
+
+  /* For large devices */
+@media (width >= 992px) {
+ .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .about__img {
+    width: 350px;
+  }
+  .about__data {
+    text-align: initial;
+  }
+  .about__info {
+    justify-content: initial;
+  }
+  .about__box {
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+  .about__description {
+    padding: 0 4rem 0 0;
+    margin-bottom: 2.5rem;
+  }
+}
+

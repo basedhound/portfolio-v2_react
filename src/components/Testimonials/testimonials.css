@@ -27,3 +27,17 @@
 .swiper-pagination-bullet-active {
   background-color: var(--first-color);
 }
+
+
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For large devices */
+@media (width >= 992px) {
+  .testimonial__container {
+    width: 750px;
+  }
+  .testimonial__card {
+    padding: 1.5rem 2rem;
+  }
+}
+

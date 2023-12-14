@@ -1,43 +1,45 @@
 import React from 'react'
 import './about.css'
+import img from "../../assets/img";
+
 
 const About = () => {
   return (
-    <section class="about section" id="about">
-      <span class="section__subtitle">Intro</span>
-      <h2 class="section__title">About Me</h2>
+    <section className="about section" id="about">
+      <span className="section__subtitle">Intro</span>
+      <h2 className="section__title">About Me</h2>
 
-      <div class="about__container container grid">
-        <img src="assets/img/about.jpg" alt="" class="about__img" />
+      <div className="about__container container grid">
+        <img src={img.about} alt="" className="about__img" />
 
-        <div class="about__data">
-          <div class="about__info">
-            <div class="about__box">
-              <i class="bx bx-award about__icon"></i>
-              <h3 class="about__title">Experience</h3>
-              <span class="about__subtitle">8 Years Working</span>
+        <div className="about__data">
+          <div className="about__info">
+            <div className="about__box">
+              <i className="bx bx-award about__icon"></i>
+              <h3 className="about__title">Experience</h3>
+              <span className="about__subtitle">8 Years Working</span>
             </div>
 
-            <div class="about__box">
-              <i class="bx bx-briefcase-alt about__icon"></i>
-              <h3 class="about__title">Completed</h3>
-              <span class="about__subtitle">48 + Projects</span>
+            <div className="about__box">
+              <i className="bx bx-briefcase-alt about__icon"></i>
+              <h3 className="about__title">Completed</h3>
+              <span className="about__subtitle">48 + Projects</span>
             </div>
 
-            <div class="about__box">
-              <i class="bx bx-support about__icon"></i>
-              <h3 class="about__title">Support</h3>
-              <span class="about__subtitle">Online 24/7</span>
+            <div className="about__box">
+              <i className="bx bx-support about__icon"></i>
+              <h3 className="about__title">Support</h3>
+              <span className="about__subtitle">Online 24/7</span>
             </div>
           </div>
 
-          <p class="about__description">
+          <p className="about__description">
             Frontend developer, I create web pages with UI / UX user interface,
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
 
-          <a href="#contact" class="button">
+          <a href="#contact" className="button">
             Contact Me
           </a>
         </div>

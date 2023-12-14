@@ -23,7 +23,8 @@
   color: var(--title-color);
   margin-bottom: 0.25rem;
 }
-.contact__card-title, .contact__card-data {
+.contact__card-title,
+.contact__card-data {
   font-size: var(--small-font-size);
 }
 .contact__card-title {
@@ -40,7 +41,7 @@
   align-items: center;
   justify-content: center;
   -moz-column-gap: 0.25rem;
-       column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 .contact__button:hover .contact__button-icon {
   transform: translateX(0.25rem);
@@ -82,4 +83,55 @@
 }
 .contact__form-area textarea {
   resize: none;
+}
+
+.contact__button-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__button-wrap p {
+margin-top: 1rem;
+}
+
+.contact__form-success {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+
+
+
+/*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
+
+/* For medium devices */
+@media (width >= 576px) {
+  .contact__info {
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+  .contact__form {
+    width: 360px;
+    margin: 0 auto;
+  }
+}
+
+@media (width >= 767px) {
+  .contact__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    column-gap: 3rem;
+    -moz-column-gap: 3rem;
+  }
+}
+
+/* For large devices */
+@media (width >= 992px) {
+  .contact__container {
+    -moz-column-gap: 6rem;
+    column-gap: 6rem;
+  }
 }
