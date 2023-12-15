@@ -3,9 +3,13 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./testimonials.css";
-import img from "../../assets/img";
+import data from "./data";
 
 const Testimonials = () => {
+  
+  // Mapping data
+  const reviews = data;
+
   return (
     <section className="testimonial section">
       <span className="section__subtitle">My clients say</span>
@@ -28,32 +32,15 @@ const Testimonials = () => {
               slidesPerView: 2,
             },
           }}>
-          <SwiperSlide className="testimonial__card swiper-slide">
-            <img src={img.testimonial1} alt="" className="testimonial__img" />
-            <h3 className="testimonial__name">Jhon Doe</h3>
-            <p className="testimonial__description">
-              A really good job, all aspects of the project were followed step
-              by step and with good results.
-            </p>
-          </SwiperSlide>
-
-          <SwiperSlide className="testimonial__card swiper-slide">
-            <img src={img.testimonial2} alt="" className="testimonial__img" />
-            <h3 className="testimonial__name">Paula Vusy</h3>
-            <p className="testimonial__description">
-              A really good job, all aspects of the project were followed step
-              by step and with good results.
-            </p>
-          </SwiperSlide>
-
-          <SwiperSlide className="testimonial__card swiper-slide">
-            <img src={img.testimonial3} alt="" className="testimonial__img" />
-            <h3 className="testimonial__name">Sara Cill</h3>
-            <p className="testimonial__description">
-              A really good job, all aspects of the project were followed step
-              by step and with good results.
-            </p>
-          </SwiperSlide>
+          {reviews.map((review) => (
+            <SwiperSlide
+              key={review.id}
+              className="testimonial__card swiper-slide">
+              <img src={review.img} alt="" className="testimonial__img" />
+              <h3 className="testimonial__name">{review.name}</h3>
+              <p className="testimonial__description">{review.desc}</p>
+            </SwiperSlide>
+          ))}
         </Swiper>
 
         <div className="swiper-pagination"></div>

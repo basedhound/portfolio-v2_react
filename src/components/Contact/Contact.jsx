@@ -95,7 +95,9 @@ const Contact = () => {
                 Nom
               </label>
               <input
+                autoComplete="name"
                 className="contact__form-input"
+                id="name"
                 name="user_name"
                 placeholder="Votre nom"
                 type="text"
@@ -108,7 +110,9 @@ const Contact = () => {
                 Mail
               </label>
               <input
+                autoComplete="email"
                 className="contact__form-input"
+                id="email"
                 name="user_email"
                 placeholder="Votre adresse Email"
                 type="email"
@@ -123,7 +127,9 @@ const Contact = () => {
               <textarea
                 cols="30"
                 rows="10"
+                autoComplete="off"
                 className="contact__form-input"
+                id="message"
                 name="user-message"
                 placeholder="Détails concernant votre projet"
                 required></textarea>

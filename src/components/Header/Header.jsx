@@ -41,6 +41,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#home"
+                title="Home"
                 className={`nav__link ${
                   activeLink === "home" ? "active-link" : ""
                 }`}>
@@ -51,6 +52,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#about"
+                title="About"
                 className={`nav__link ${
                   activeLink === "about" ? "active-link" : ""
                 }`}>
@@ -61,6 +63,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#skills"
+                title="Skills"
                 className={`nav__link ${
                   activeLink === "skills" ? "active-link" : ""
                 }`}>
@@ -71,6 +74,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#work"
+                title="Work"
                 className={`nav__link ${
                   activeLink === "work" ? "active-link" : ""
                 }`}>
@@ -81,6 +85,7 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#contact"
+                title="Contact"
                 className={`nav__link ${
                   activeLink === "contact" ? "active-link" : ""
                 }`}>
