@@ -1,117 +1,125 @@
-import React from "react";
 import "./skills.css";
+import { skillsData, certifsData } from "./data";
 
 const Skills = () => {
+  const skills = skillsData;
+  const certifs = certifsData;
+
   return (
     <section className="skills section" id="skills">
       <span className="section__subtitle">Skills</span>
       <h2 className="section__title">Mes compétences</h2>
-
-      {/* CONTAINER */}
       <div className="skills__container container grid">
-        {/* FRONTEND */}
-        <div className="skills__content">
-          <h3 className="skills__title">Frontend</h3>
-
-          <div className="skills__box">
-            {/* 1st column */}
-            <div className="skills__group">
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">HTML</h3>
-                  <span className="skills__level">Basic</span>
+        {/* SKILLS */}
+        {skills.map((skill) => (
+          <div className="skills__content" key={skill.id}>
+            <h3 className="skills__title">{skill.cat}</h3>
+            <div className="skills__box">
+              {/* col 1 */}
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name1}</h3>
+                    <span className="skills__level">{skill.desc1}</span>
+                  </div>
+                </div>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name2}</h3>
+                    <span className="skills__level">{skill.desc2}</span>
+                  </div>
+                </div>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name3}</h3>
+                    <span className="skills__level">{skill.desc3}</span>
+                  </div>
                 </div>
               </div>
-
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">JavaScript</h3>
-                  <span className="skills__level">Advanced</span>
+              {/* col 2 */}
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name4}</h3>
+                    <span className="skills__level">{skill.desc4}</span>
+                  </div>
                 </div>
-              </div>
-
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">Bootstrap</h3>
-                  <span className="skills__level">Intermediate</span>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name5}</h3>
+                    <span className="skills__level">{skill.desc5}</span>
+                  </div>
                 </div>
-              </div>
-            </div>
-            {/* close 1st column */}
-
-            {/* 2nd column */}
-            <div className="skills__group">
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">CSS</h3>
-                  <span className="skills__level">Intermediate</span>
-                </div>
-              </div>
-
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">React</h3>
-                  <span className="skills__level">Intermediate</span>
-                </div>
-              </div>
-
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-                <div>
-                  <h3 className="skills__name">Tailwind</h3>
-                  <span className="skills__level">Intermediate</span>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <h3 className="skills__name">{skill.name6}</h3>
+                    <span className="skills__level">{skill.desc6}</span>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* close 2nd column */}
           </div>
-        </div>
-        {/* close FRONTEND */}
-
-        {/* CERTIFICATE */}
-        <div className="skills__content">
-          <h3 className="skills__title">Certificates</h3>
-
-          <div className="skills__box">
-            {/* 1st column */}
-            <div className="skills__group">
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-
-                <div>
-                  <h3 className="skills__name">OpenClassrooms</h3>
-                  <span className="skills__level">Web Developer | 2022</span>
+        ))}
+        {/* CERTIFICATES */}
+        {certifs.map((certif) => (
+          <div className="skills__content" key={certif.id}>
+            <h3 className="skills__title">{certif.cat}</h3>
+            <div className="skills__box">
+              <div className="skills__group">
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={certif.link1}
+                      className="skills__button">
+                      <h3 className="skills__name">{certif.name1}</h3>
+                      <i className="bx bx-right-arrow-alt skills__icon"></i>
+                    </a>
+                    <span className="skills__level">{certif.desc1}</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-
-                <div>
-                  <h3 className="skills__name">FreeCodeCamp</h3>
-                  <span className="skills__level">
-                    Fullstack curriculum | 2023
-                  </span>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={certif.link2}
+                      className="skills__button">
+                      <h3 className="skills__name">{certif.name2}</h3>
+                      <i className="bx bx-right-arrow-alt skills__icon"></i>
+                    </a>
+                    <span className="skills__level">{certif.desc2}</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="skills__data">
-                <i className="bx bxs-badge-check"></i>
-
-                <div>
-                  <h3 className="skills__name">Harvard CS50</h3>
-                  <span className="skills__level">Computer Science | 2023</span>
+                <div className="skills__data">
+                  <i className="bx bxs-badge-check"></i>
+                  <div>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={certif.link3}
+                      className="skills__button">
+                      <h3 className="skills__name">{certif.name3}</h3>
+                      <i className="bx bx-right-arrow-alt skills__icon"></i>
+                    </a>
+                    <span className="skills__level">{certif.desc3}</span>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* close 1st column */}
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

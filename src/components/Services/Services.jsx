@@ -15,6 +15,7 @@ const Services = () => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
+  
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -57,7 +58,7 @@ const Services = () => {
             <span
               className="services__button"
               onClick={() => openModal(service)}>
-              En savoir plus
+              Plus
               <i className="bx bx-right-arrow-alt services__icon"></i>
             </span>
 

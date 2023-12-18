@@ -1,4 +1,3 @@
-import React from "react";
 import "./home.css";
 import img from "../../assets/img";
 
@@ -7,20 +6,20 @@ const Home = () => {
     <section className="home section" id="home">
       <div className="home__container container grid">
         <div className="home__data">
-          <span className="home__greeting">Hello, I'm</span>
+          <span className="home__greeting"></span>
           <h1 className="home__name">Frank Vukelić</h1>
-          <h3 className="home__education">Fullstack Developer</h3>
+          <h3 className="home__education">Developpeur Fullstack</h3>
 
           <div className="home__buttons">
-            {/* Insert CV */}
             <a
-              download=""
-              href="assets/pdf/Ansel-Cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="/pdf/Ansel-Cv.pdf"
               className="button button--ghost">
-              Download CV
+              Mon CV
             </a>
             <a href="#about" className="button">
-              About me
+              À propos
             </a>
           </div>
         </div>

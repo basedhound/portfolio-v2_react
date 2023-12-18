@@ -35,42 +35,7 @@ const data = [
     info4: "N I position your company brand.",
     info5: "O Design and mockups of products for companies.",
   },
-  {
-    id: 4,
-    title: "Prout Designer",
-    title1: "Prout",
-    title2: "Designer",
-    desc: "Prout Service with more than 3 years of experience. Providing quality work to clients and companies.",
-    info1: "P I develop the user interface.",
-    info2: "Q Web page development.",
-    info3: "R I create ux element interactions.",
-    info4: "S I position your company brand.",
-    info5: "T Design and mockups of products for companies.",
-  },
-  {
-    id: 5,
-    title: "Prout Designer",
-    title1: "Prout",
-    title2: "Designer",
-    desc: "Prout Service with more than 3 years of experience. Providing quality work to clients and companies.",
-    info1: "P I develop the user interface.",
-    info2: "Q Web page development.",
-    info3: "R I create ux element interactions.",
-    info4: "S I position your company brand.",
-    info5: "T Design and mockups of products for companies.",
-  },
-  {
-    id: 6,
-    title: "Prout Designer",
-    title1: "Prout",
-    title2: "Designer",
-    desc: "Prout Service with more than 3 years of experience. Providing quality work to clients and companies.",
-    info1: "P I develop the user interface.",
-    info2: "Q Web page development.",
-    info3: "R I create ux element interactions.",
-    info4: "S I position your company brand.",
-    info5: "T Design and mockups of products for companies.",
-  },
+
 ];
 
 export default data;

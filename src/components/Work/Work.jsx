@@ -58,10 +58,20 @@ const Work = () => {
           <div key={project.id} className="work__card mix web">
             <img src={project.img} alt="" className="work__img" />
             <h3 className="work__title">{project.name}</h3>
-            <a href={project.link} className="work__button" target="_blank">
-              Live
-              <i className="bx bx-right-arrow-alt work__icon"></i>
-            </a>
+            <div className="work__links">
+              <a
+                href={project.link}
+                className="work__button"
+                target="_blank"
+                rel="noopener noreferrer">
+                Live
+                <i className="bx bx-right-arrow-alt work__icon"></i>
+              </a>
+              <a href={project.link} className="work__button" target="_blank">
+                Github
+                <i className="bx bx-right-arrow-alt work__icon"></i>
+              </a>
+            </div>
           </div>
         ))}
       </div>
