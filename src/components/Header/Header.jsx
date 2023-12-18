@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import "./header.css";
 import "../../styles.css";
 
-const Header = () => {
-  const [activeLink, setActiveLink] = useState("");
+import { ThemeContext } from "../../App";
 
+const Header = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  
+
+  // Navbar current location
+  const [activeLink, setActiveLink] = useState("");
   useEffect(() => {
     const scrollActive = () => {
       const sections = document.querySelectorAll("section[id]");
@@ -22,14 +27,12 @@ const Header = () => {
         }
       });
     };
-
     window.addEventListener("scroll", scrollActive);
-
     return () => {
       window.removeEventListener("scroll", scrollActive);
     };
   }, []);
-
+ 
   return (
     <header className="header" id="header">
       <nav className="nav container">
@@ -96,7 +99,12 @@ const Header = () => {
         </div>
 
         {/* Theme change button */}
-        <i className="bx bx-moon change-theme" id="theme-button"></i>
+        <i
+          onClick={toggleTheme}
+          className={`bx ${
+            theme === "dark" ? "bx-sun" : "bx-moon"
+          } change-theme`}
+          id="theme-button"></i>
       </nav>
     </header>
   );

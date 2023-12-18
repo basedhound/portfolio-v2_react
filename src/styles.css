@@ -22,6 +22,7 @@
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --body-color: hsl(var(--second-hue), 48%, 8%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
+
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -115,70 +116,65 @@ img {
 }
 
 /*========== Variables Dark theme ==========*/
-body.light-theme {
+/* body {
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+} */
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+body#light  {
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
   --body-color: hsl(var(--second-hue), 100%, 99%);
   --container-color: #fff;
 }
-
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
-.light-theme .scroll-header {
+#light .scroll-header {
   box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);
 }
-
-.light-theme .nav__menu {
+#light .nav__menu {
   background-color: hsla(var(--second-hue), 32%, 90%, 0.8);
 }
-
-.light-theme .section__subtitle {
+#light .section__subtitle {
   color: var(--text-color);
 }
-
-.light-theme .home__social-link {
+#light .home__social-link {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
 }
-
-.light-theme .home__social::after,
-.light-theme .footer__social-link {
+#light .home__social::after,
+#light .footer__social-link {
   background-color: var(--title-color);
 }
-
-.light-theme .home__social-link,
-.light-theme .home__scroll,
-.light-theme .button,
-.light-theme .button:hover,
-.light-theme .footer__title,
-.light-theme .footer__link,
-.light-theme .footer__copy,
-.light-theme .active-work {
+#light .home__social-link,
+#light .home__scroll,
+#light .button,
+#light .button:hover,
+#light .footer__title,
+#light .footer__link,
+#light .footer__copy,
+#light .active-work {
   color: var(--title-color);
 }
-
-.light-theme .about__box {
+#light .about__box {
   box-shadow: 0 2px 8px hsla(var(--second-hue), 48%, 8%, 0.1);
 }
-
-.light-theme .skills__content,
-.light-theme .services__card,
-.light-theme .work__card,
-.light-theme .testimonial__card,
-.light-theme .contact__card {
+#light .skills__content,
+#light .services__card,
+#light .work__card,
+#light .testimonial__card,
+#light .contact__card {
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, 0.1);
 }
-
-.light-theme::-webkit-scrollbar {
+#light::-webkit-scrollbar {
   background-color: hsl(var(--second-hue), 8%, 66%);
 }
-
-.light-theme::-webkit-scrollbar-thumb {
+#light::-webkit-scrollbar-thumb {
   background-color: hsl(var(--second-hue), 8%, 54%);
 }
-
-.light-theme::-webkit-scrollbar-thumb:hover {
+#light::-webkit-scrollbar-thumb:hover {
   background-color: hsl(var(--second-hue), 8%, 44%);
 }
 
