@@ -1,13 +1,10 @@
 import { useEffect, useState, useContext } from "react";
+import { ThemeContext } from "../../App";
 import "./header.css";
 import "../../styles.css";
 
-import { ThemeContext } from "../../App";
-
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  
-
   // Navbar current location
   const [activeLink, setActiveLink] = useState("");
   useEffect(() => {
@@ -32,13 +29,34 @@ const Header = () => {
       window.removeEventListener("scroll", scrollActive);
     };
   }, []);
- 
+
+  // Change header background when scrolling
+  function scrollHeader() {
+    const header = document.getElementById("header");
+    // if scroll is greater than 50 viewport height, add scroll-header class
+    if (this.scrollY >= 50) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+  }
+  window.addEventListener("scroll", scrollHeader);
+
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">
-          FV
-        </a>
+        <ul className="nav__social-list">
+          <li>
+            <a
+              href="https://www.github.com/basedhound"
+              target="_blank"
+              className="nav__social-link">
+              <i className="bx bxl-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="nav__social-link">
+              <i className="bx bx-mail-send"></i>
+            </a>
+          </li>
+        </ul>
         <div className="nav__menu">
           <ul className="nav__list">
             <li className="nav__item">
@@ -51,7 +69,6 @@ const Header = () => {
                 <i className="bx bx-home-alt nav__icon"></i>
               </a>
             </li>
-
             <li className="nav__item">
               <a
                 href="#about"
@@ -62,7 +79,6 @@ const Header = () => {
                 <i className="bx bx-user nav__icon"></i>
               </a>
             </li>
-
             <li className="nav__item">
               <a
                 href="#skills"
@@ -73,7 +89,6 @@ const Header = () => {
                 <i className="bx bx-book nav__icon"></i>
               </a>
             </li>
-
             <li className="nav__item">
               <a
                 href="#work"
@@ -84,7 +99,6 @@ const Header = () => {
                 <i className="bx bx-briefcase-alt-2 nav__icon"></i>
               </a>
             </li>
-
             <li className="nav__item">
               <a
                 href="#contact"
@@ -97,14 +111,12 @@ const Header = () => {
             </li>
           </ul>
         </div>
-
         {/* Theme change button */}
         <i
           onClick={toggleTheme}
           className={`bx ${
             theme === "dark" ? "bx-sun" : "bx-moon"
-          } change-theme`}
-          id="theme-button"></i>
+          } change-theme`}></i>
       </nav>
     </header>
   );

@@ -1,9 +1,9 @@
 /*=============== FOOTER ===============*/
-.footer {
+/* .footer {
   background-color: var(--first-color);
-}
+} */
 .footer__container {
-  padding: 2rem 0 6rem;
+  padding: 0rem 0 4rem;
 }
 .footer__title, .footer__link {
   color: var(--body-color);

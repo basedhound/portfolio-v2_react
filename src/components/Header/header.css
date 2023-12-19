@@ -30,8 +30,8 @@
   width: 90%;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   transition: 0.4s;
   left: 0;
   right: 0;
@@ -50,6 +50,26 @@
   border-radius: 5rem;
 }
 
+.nav__social-list {
+  display: flex;
+}
+.nav__social-link {
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--container-color);
+  color: var(--first-color);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 1.25rem;
+  transition: 0.4s;
+  margin-right: 1rem;
+}
+.nav__social-link:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
 /* Active link */
 .active-link {
   background: linear-gradient(
@@ -64,6 +84,15 @@
 /* Change background header */
 .scroll-header {
   box-shadow: 0 4px 4px hsla(0, 0%, 4%, 0.3);
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.change-theme:hover {
+  color: var(--first-color);
 }
 
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/

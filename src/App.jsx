@@ -15,32 +15,29 @@ import "./styles.css";
 export const ThemeContext = createContext();
 
 const App = () => {
-
-  // Theme
+  // Theme switch
   const [theme, setTheme] = useState("dark");
   const toggleTheme = () => {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   };
-
-   useEffect(() => {
-     document.body.id = theme;
-   }, [theme]);
+  // id or classlist(add/remove) are both valid methods
+  useEffect(() => {
+    document.body.id = theme;
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div id={theme}>
-        <Header />
-        <main className="main">
-          <Home />
-          <About />
-          <Skills />
-          <Services />
-          <Work />
-          <Testimonials />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main className="main">
+        <Home />
+        <About />
+        <Skills />
+        <Services />
+        <Work />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
     </ThemeContext.Provider>
   );
 };

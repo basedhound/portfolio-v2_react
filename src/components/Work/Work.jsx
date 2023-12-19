@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Reveal, SlideReveal } from "../../utils/Reveal";
 import "./work.css";
 import data from "./data";
 
@@ -26,53 +27,56 @@ const Work = () => {
 
   return (
     <section className="work section" id="work">
-      <span className="section__subtitle">My Portfolio</span>
-      <h2 className="section__title">Recent Works</h2>
-
-      {/* Filter : All */}
-      <ul className="work__filters">
-        <button
-          className={`work__filter ${
-            activeFilter === "All" ? "active-filter" : ""
-          }`}
-          onClick={() => handleFilter("All")}>
-          All
-        </button>
-
-        {/* Filters : Categories */}
-        {categories.map((category) => (
+      <Reveal>
+        <span className="section__subtitle">My Portfolio</span>
+        <h2 className="section__title">Recent Works</h2>    
+        
+      {/* Filter : All */}    
+        <ul className="work__filters">
           <button
             className={`work__filter ${
-              activeFilter === category ? "active-filter" : ""
+              activeFilter === "All" ? "active-filter" : ""
             }`}
-            key={category}
-            onClick={() => handleFilter(category)}>
-            {category}
+            onClick={() => handleFilter("All")}>
+            All
           </button>
-        ))}
-      </ul>
+          {/* Filters : Categories */}
+          {categories.map((category) => (
+            <button
+              className={`work__filter ${
+                activeFilter === category ? "active-filter" : ""
+              }`}
+              key={category}
+              onClick={() => handleFilter(category)}>
+              {category}
+            </button>
+          ))}
+        </ul>
+      </Reveal>
 
       {/* Gallery */}
       <div className="work__container container grid">
         {projects.map((project) => (
-          <div key={project.id} className="work__card mix web">
-            <img src={project.img} alt="" className="work__img" />
-            <h3 className="work__title">{project.name}</h3>
-            <div className="work__links">
-              <a
-                href={project.link}
-                className="work__button"
-                target="_blank"
-                rel="noopener noreferrer">
-                Live
-                <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
-              <a href={project.link} className="work__button" target="_blank">
-                Github
-                <i className="bx bx-right-arrow-alt work__icon"></i>
-              </a>
+          <SlideReveal key={project.id}>
+            <div className="work__card mix web">
+              <img src={project.img} alt="" className="work__img" />
+              <h3 className="work__title">{project.name}</h3>
+              <div className="work__links">
+                <a
+                  href={project.link}
+                  className="work__button"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Live
+                  <i className="bx bx-right-arrow-alt work__icon"></i>
+                </a>
+                <a href={project.link} className="work__button" target="_blank">
+                  Github
+                  <i className="bx bx-right-arrow-alt work__icon"></i>
+                </a>
+              </div>
             </div>
-          </div>
+          </SlideReveal>
         ))}
       </div>
     </section>
