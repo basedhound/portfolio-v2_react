@@ -6,10 +6,14 @@ import "./contact.css";
 
 const Contact = () => {
   const form = useRef();
+  const [isValid, setIsValid] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
-
+  /*=============== EMAIL JS ===============*/
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!isValid) {
+      return;
+    }
     const publicKey = import.meta.env.VITE_EJS_KEY;
     // serviceID - templateID - #form - publicKey
     emailjs
@@ -26,6 +30,73 @@ const Contact = () => {
           console.log("EmailJS", error.text);
         }
       );
+  };
+  /*=============== NAME VALIDATION ===============*/
+  const [name, setName] = useState("");
+  const nameRegex = /^(?!^\s+$)[\p{L}\s'-]+$/u;
+
+  const handleName = (event) => {
+    const { value } = event.target;
+    setName(value);
+    // Evaluate if it matches the pattern values
+    if (value.match(nameRegex)) {
+      event.target.classList.add("valid");
+      event.target.classList.remove("invalid");
+      setIsValid(true);
+    } else {
+      event.target.classList.add("invalid");
+      event.target.classList.remove("valid");
+      setIsValid(false);
+    }
+    // If the input field is empty, remove classes
+    if (value === "") {
+      event.target.classList.remove("invalid");
+      event.target.classList.remove("valid");
+    }
+  };
+  /*=============== EMAIL VALIDATION ===============*/
+  const [email, setEmail] = useState("");
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const handleEmail = (event) => {
+    const { value } = event.target;
+    setEmail(value);
+    // Evaluate if it matches the pattern values
+    if (value.match(emailRegex)) {
+      event.target.classList.add("valid");
+      event.target.classList.remove("invalid");
+      setIsValid(true);
+    } else {
+      event.target.classList.add("invalid");
+      event.target.classList.remove("valid");
+      setIsValid(false);
+    }
+    // If the input field is empty, remove classes
+    if (value === "") {
+      event.target.classList.remove("invalid");
+      event.target.classList.remove("valid");
+    }
+  };
+  /*=============== MESSAGE VALIDATION ===============*/
+  const [message, setMessage] = useState("");
+  const messageRegex = /^(?:\S+(?:\s+|$)){5,100}$/;
+  const handleMessage = (event) => {
+    const { value } = event.target;
+    setMessage(value);
+    // Evaluate if it matches the pattern values
+    if (value.match(messageRegex)) {
+      event.target.classList.add("valid");
+      event.target.classList.remove("invalid");
+      setIsValid(true);
+    } else {
+      event.target.classList.add("invalid");
+      event.target.classList.remove("valid");
+      setIsValid(false);
+    }
+    // If the input field is empty, remove classes
+    if (value === "") {
+      event.target.classList.remove("invalid");
+      event.target.classList.remove("valid");
+    }
   };
 
   return (
@@ -131,11 +202,12 @@ const Contact = () => {
           </div>
         </div>
 
-          <div className="contact__content">
-        <Reveal>
-            <h3 className="contact__title">Parlez-moi de votre projet</h3></Reveal>
-              {/* Form */}
-              <Reveal>
+        <div className="contact__content">
+          <Reveal>
+            <h3 className="contact__title">Parlez-moi de votre projet</h3>
+          </Reveal>
+          {/* Form */}
+          <Reveal>
             <form className="contact__form" ref={form} onSubmit={sendEmail}>
               <div className="contact__form-div">
                 <label className="contact__form-tag" htmlFor="name">
@@ -149,6 +221,8 @@ const Contact = () => {
                   placeholder="Votre nom"
                   type="text"
                   required
+                  onChange={handleName}
+                  value={name}
                 />
               </div>
               <div className="contact__form-div">
@@ -163,6 +237,8 @@ const Contact = () => {
                   placeholder="Votre adresse Email"
                   type="email"
                   required
+                  onChange={handleEmail}
+                  value={email}
                 />
               </div>
               <div className="contact__form-div contact__form-area">
@@ -176,8 +252,10 @@ const Contact = () => {
                   className="contact__form-input"
                   id="message"
                   name="user-message"
-                  placeholder="Détails concernant votre projet"
-                  required></textarea>
+                  placeholder="Détails (100 mots max)"
+                  required
+                  onChange={handleMessage}
+                  value={message}></textarea>
               </div>
               <div className="contact__button-wrap">
                 <button className="button" type="submit">
@@ -186,8 +264,8 @@ const Contact = () => {
                 {successMsg && <p>{successMsg}</p>}
               </div>
             </form>
-        </Reveal>
-          </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
