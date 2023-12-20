@@ -206,15 +206,17 @@ body#light {
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
   transition: 0.4s;
+  border: var(--body-color) solid 1px;
 }
 .button:hover {
   background-color: var(--first-color-alt);
-  color: var(--body-color);
+  color: white;
+  border-color: white;
 }
 .button--ghost {
   background-color: transparent;
-  border: 2px solid var(--first-color);
   color: var(--first-color);
+  border: 1px solid var(--first-color);
 }
 
 /*=============== SCROLL BAR ===============*/

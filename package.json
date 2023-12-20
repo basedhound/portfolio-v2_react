@@ -13,8 +13,10 @@
     "@emailjs/browser": "^3.11.0",
     "framer-motion": "^10.16.14",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-simple-typewriter": "^5.0.1",
+    "react-use": "^17.4.2",
     "swiper": "^11.0.5"
   },
   "devDependencies": {

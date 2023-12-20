@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Reveal, SlideReveal } from "../../utils/Reveal";
 import "./services.css";
+import "../../assets/css/modal.css"
 import data from "./data";
 
 const Services = () => {
@@ -11,36 +12,34 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   // Modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = (service) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  // Close modal when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (event.target.classList.contains("services__modal")) {
-        closeModal();
-      }
-    };
-    const handleEscapeKey = (event) => {
-      if (event.key === "Escape") {
-        closeModal();
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleEscapeKey);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, []);
+ const [isModalOpen, setIsModalOpen] = useState(false);
+ const openModal = (service) => {
+   setSelectedService(service);
+   setIsModalOpen(true);
+ };
+ const closeModal = () => {
+   setIsModalOpen(false);
+ };
+ // Close modal when clicking outside
+ useEffect(() => {
+   const handleClickOutside = (event) => {
+     if (event.target.classList.contains("modal")) {
+       closeModal();
+     }
+   };
+   document.addEventListener("click", handleClickOutside);
+   return () => {
+     document.removeEventListener("click", handleClickOutside);
+   };
+ }, []);
+ // Prevent scrolling when the modal is open
+ useEffect(() => {
+   if (isModalOpen) {
+     document.body.style.overflow = "hidden";
+   } else {
+     document.body.style.overflow = "auto";
+   }
+ }, [isModalOpen]);
 
   return (
     <section className="services section">
@@ -64,57 +63,57 @@ const Services = () => {
                 Plus
                 <i className="bx bx-right-arrow-alt services__icon"></i>
               </span>
+            </div>
+          </SlideReveal>
+        ))}
               <div
-                className={`services__modal ${
-                  isModalOpen ? "active-modal" : ""
+                className={`modal ${
+                  isModalOpen ? "modal-visible" : ""
                 }`}>
-                <div className="services__modal-content">
+                <div className="modal-content">
                   <i
-                    className="bx bx-x services__modal-close"
+                    className="bx bx-x modal-close"
                     onClick={closeModal}></i>
-                  <h3 className="services__modal-title">
+                  <h3 className="modal-title">
                     {selectedService?.title}
                   </h3>
-                  <p className="services__modal-description">
+                  <p className="modal-description">
                     {selectedService?.desc}
                   </p>
-                  <ul className="services__modal-list">
-                    <li className="services__modal-item">
-                      <i className="bx bx-check services__modal-icon"></i>
-                      <p className="services__modal-info">
+                  <ul className="modal-list">
+                    <li className="modal-item">
+                      <i className="bx bx-check modal-icon"></i>
+                      <p className="modal-info">
                         {selectedService?.info1}
                       </p>
                     </li>
-                    <li className="services__modal-item">
-                      <i className="bx bx-check services__modal-icon"></i>
-                      <p className="services__modal-info">
+                    <li className="modal-item">
+                      <i className="bx bx-check modal-icon"></i>
+                      <p className="modal-info">
                         {selectedService?.info2}
                       </p>
                     </li>
-                    <li className="services__modal-item">
-                      <i className="bx bx-check services__modal-icon"></i>
-                      <p className="services__modal-info">
+                    <li className="modal-item">
+                      <i className="bx bx-check modal-icon"></i>
+                      <p className="modal-info">
                         {selectedService?.info3}
                       </p>
                     </li>
-                    <li className="services__modal-item">
-                      <i className="bx bx-check services__modal-icon"></i>
-                      <p className="services__modal-info">
+                    <li className="modal-item">
+                      <i className="bx bx-check modal-icon"></i>
+                      <p className="modal-info">
                         {selectedService?.info4}
                       </p>
                     </li>
-                    <li className="services__modal-item">
-                      <i className="bx bx-check services__modal-icon"></i>
-                      <p className="services__modal-info">
+                    <li className="modal-item">
+                      <i className="bx bx-check modal-icon"></i>
+                      <p className="modal-info">
                         {selectedService?.info5}
                       </p>
                     </li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </SlideReveal>
-        ))}
       </div>
     </section>
   );

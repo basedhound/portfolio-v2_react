@@ -36,9 +36,23 @@
 }
 .contact__card {
   background-color: var(--container-color);
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 0.75rem;
   text-align: center;
+}
+.contact__card:hover .contact__button-icon{
+  animation: slideRight 1s infinite;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0.25rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .contact__card-icon {
   font-size: 2rem;
@@ -59,14 +73,11 @@
 .contact__button {
   color: var(--first-color);
   font-size: var(--small-font-size);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 0.25rem;
   column-gap: 0.25rem;
-}
-.contact__button:hover .contact__button-icon {
-  transform: translateX(0.25rem);
+  -moz-column-gap: 0.25rem;
 }
 .contact__button-icon {
   font-size: 1rem;
@@ -94,7 +105,7 @@
   z-index: 1;
   transition: border-color 0.5s, box-shadow 0.5s;
 }
-/* Field color */
+/* Input field colors */
 .contact__form-input:focus{
   border-color: var(--first-color-alt);
   box-shadow: 0 1px 10px var(--first-color-alt);
@@ -107,13 +118,6 @@
   border-color: hsl(353, 64%, 53%);
   box-shadow: 0 1px 10px hsl(353, 64%, 53%);
 }
-.invalid .form__error {
-  opacity: 1;
-}
-
-
-
-
 .contact__form-tag {
   position: absolute;
   top: -0.75rem;
@@ -129,21 +133,17 @@
 .contact__form-area textarea {
   resize: none;
 }
-.contact__button-wrap {
-  width: 100%;
+.contact__sendButton-wrap {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact__button-wrap p {
-  margin-top: 1rem;
-}
-.contact__form-success {
-  font-size: var(--small-font-size);
-  font-weight: 600;
+.contact__sendButton-wrap p {
   margin-top: 1rem;
 }
 
+/* ========= Modal ========= */
 
 
 
