@@ -15,8 +15,8 @@ const Skills = () => {
       <div className="skills__container container grid">
         {/* SKILLS */}
         {skills.map((skill) => (
-          <SlideReveal>
-            <div className="skills__content" key={skill.id}>
+          <SlideReveal key={skill.id}>
+            <div className="skills__content">
               <h3 className="skills__title">{skill.cat}</h3>
               <div className="skills__box">
                 {/* col 1 */}
@@ -73,8 +73,8 @@ const Skills = () => {
         ))}
         {/* CERTIFICATES */}
         {certifs.map((certif) => (
-          <SlideReveal>
-            <div className="skills__content" key={certif.id}>
+          <SlideReveal key={certif.id}>
+            <div className="skills__content">
               <h3 className="skills__title">{certif.cat}</h3>
               <div className="skills__box">
                 <div className="skills__group">

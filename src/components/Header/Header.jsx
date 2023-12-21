@@ -47,12 +47,13 @@ const Header = () => {
             <a
               href="https://www.github.com/basedhound"
               target="_blank"
+              title="GitHub"
               className="nav__social-link">
               <i className="bx bxl-github"></i>
             </a>
           </li>
           <li>
-            <a href="#contact" className="nav__social-link">
+            <a href="#contact" title="Contact" className="nav__social-link">
               <i className="bx bx-mail-send"></i>
             </a>
           </li>

@@ -4,8 +4,8 @@ import "./services.css";
 import "../../assets/css/modal.css"
 import data from "./data";
 
-const Services = () => {
-  // Mapping data
+const Services = () => { 
+  // Mapping data  
   const services = data;
 
   // Display correct data in each modal
@@ -44,7 +44,7 @@ const Services = () => {
   return (
     <section className="services section">
       <Reveal>
-        <span className="section__subtitle">Mes compétences</span>
+        <span className="section__subtitle">Services</span>
         <h2 className="section__title">À votre service</h2>
       </Reveal>
 

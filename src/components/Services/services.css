@@ -32,17 +32,18 @@
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
 
 /* For small devices */
-@media (width <=320px) {
+@media (width <=310px) {
   .services__container {
-    grid-template-columns: 145px;
+    grid-template-columns: repeat(2, 125px);
     justify-content: center;
+    gap: 0.8rem;
   }
 }
 
 /* For medium devices */
 @media (width >= 576px) {
     .services__container {
-      grid-template-columns: repeat(2, 160px);
+      grid-template-columns: repeat(3, 160px);
       justify-content: center;
     }
 }

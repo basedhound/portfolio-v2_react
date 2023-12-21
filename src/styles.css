@@ -97,6 +97,11 @@ a {
   text-decoration: none;
 }
 
+::selection {
+  background-color: var(--first-color-alt);
+  color: white;
+}
+
 button {
   cursor: pointer;
   border: none;

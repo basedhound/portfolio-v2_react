@@ -6,22 +6,28 @@ import data from "./data";
 const Work = () => {
   const [projects, setProjects] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Favs");
 
-  // Set projects and categories
+  // Set categories and projects
   useEffect(() => {
-    setProjects(data);
     setCategories([...new Set(data.map((item) => item.cat))]);
-  }, []);
-
-  // Filter
-  const handleFilter = (category) => {
-    if (category === "All") {
-      setProjects(data);
+    if (activeFilter === "Favs") {
+      setProjects(data.filter((item) => item.fav === true));
     } else {
-      const filteredData = data.filter((item) => item.cat === category);
-      setProjects(filteredData);
+      setProjects(data.filter((item) => item.cat === activeFilter));
     }
+  }, [activeFilter]);
+
+  // Handle filters buttons
+  const handleFilter = (category) => {
+    let filteredData = data;
+    if (category !== "Favs") {
+      filteredData = data.filter((item) => item.cat === category);
+    }
+    if (category === "Favs") {
+      filteredData = data.filter((item) => item.fav === true);
+    }
+    setProjects(filteredData);
     setActiveFilter(category);
   };
 
@@ -29,16 +35,16 @@ const Work = () => {
     <section className="work section" id="work">
       <Reveal>
         <span className="section__subtitle">My Portfolio</span>
-        <h2 className="section__title">Recent Works</h2>    
-        
-      {/* Filter : All */}    
+        <h2 className="section__title">Recent Works</h2>
+
+        {/* Filter : All */}
         <ul className="work__filters">
           <button
             className={`work__filter ${
-              activeFilter === "All" ? "active-filter" : ""
+              activeFilter === "Favs" ? "active-filter" : ""
             }`}
-            onClick={() => handleFilter("All")}>
-            All
+            onClick={() => handleFilter("Favs")}>
+            Favoris
           </button>
           {/* Filters : Categories */}
           {categories.map((category) => (

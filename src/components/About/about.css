@@ -34,6 +34,7 @@
 }
 .about__description {
   margin-bottom: 2rem;
+  height: 75px;
 }
 
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
@@ -43,6 +44,10 @@
   .about__info {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about__description {
+  margin-bottom: 2rem;
+  height: 150px;
+}
   }
 
 

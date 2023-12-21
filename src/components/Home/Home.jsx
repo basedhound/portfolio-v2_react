@@ -20,15 +20,15 @@ const Home = () => {
               />
             </h1>
             <h3 className="home__education">
-              Developpeur {""}
+              Développeur {""}
               <Typewriter
                 words={[
                   "",
                   "Web",
+                  "Fullstack",
                   "Frontend",
                   "Backend",
-                  "Fullstack",
-                  "~ Designer",
+                  "/ Designer",
                 ]}
                 loop={0}
                 cursor
