@@ -1,25 +1,31 @@
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
+import { infinity } from "ldrs";
 import { Reveal, SlideReveal } from "../../utils/Reveal";
 import "./contact.css";
 import "../../assets/css/modal.css";
 
+infinity.register();
+
 const Contact = () => {
   const form = useRef();
-  const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState(false); // Form validation
+  const [isLoading, setIsLoading] = useState(false); // Button loading
   /*=============== EMAIL JS ===============*/
   const sendEmail = (e) => {
     e.preventDefault();
     if (!isValid) {
       return;
     }
+    setIsLoading(true); // Button loading
     const publicKey = import.meta.env.VITE_EJS_KEY;
     // serviceID - templateID - #form - publicKey
     emailjs
       .sendForm("service_xoa2uta", "template_ehkz8nv", form.current, publicKey)
       .then(
         () => {
+          setIsLoading(false); // Button loading
           setIsModalOpen(true);
           setName("");
           setEmail("");
@@ -33,7 +39,7 @@ const Contact = () => {
           });
           setTimeout(() => {
             setIsModalOpen(false); // Close the modal after 10 seconds
-          }, 15000);
+          }, 12500);
         },
         (error) => {
           console.log("EmailJS", error.text);
@@ -123,6 +129,32 @@ const Contact = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+  // Close modal when slide on touchscreen
+  const modalRef = useRef(null);
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+  const touchEndX = useRef(null);
+  const touchEndY = useRef(null);
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+    touchStartY.current = event.touches[0].clientY;
+  };
+  const handleTouchMove = (event) => {
+    touchEndX.current = event.touches[0].clientX;
+    touchEndY.current = event.touches[0].clientY;
+  };
+  const handleTouchEnd = () => {
+    const touchDistanceX = touchEndX.current - touchStartX.current;
+    const touchDistanceY = touchEndY.current - touchStartY.current;
+    const threshold = 50; // Adjust this value to control the sensitivity of the swipe
+    if (
+      Math.abs(touchDistanceX) > threshold ||
+      Math.abs(touchDistanceY) > threshold
+    ) {
+      closeModal();
+    }
+  };
+
   // Prevent scrolling when the modal is open
   useEffect(() => {
     if (isModalOpen) {
@@ -182,7 +214,7 @@ const Contact = () => {
       <div className="contact__container container grid">
         <div className="contact__content">
           <div className="contact__info">
-            <motion.div
+            <m.div
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.25 }}
               className="contact__card">
@@ -198,9 +230,9 @@ const Contact = () => {
                 Cliquez ici
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.5 }}
               className="contact__card">
@@ -214,9 +246,9 @@ const Contact = () => {
                 Cliquez ici
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.75 }}
               className="contact__card">
@@ -230,7 +262,7 @@ const Contact = () => {
                 Cliquez ici
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
-            </motion.div>
+            </m.div>
           </div>
         </div>
         <div className="contact__content">
@@ -288,9 +320,19 @@ const Contact = () => {
                   onChange={handleMessage}
                   value={message}></textarea>
               </div>
-              <div className="contact__sendButton-wrap">
+              <div className="contact__formButton-wrap">
                 <button className="button" type="submit">
-                  Envoyer
+                  {isLoading ? (
+                    <l-infinity
+                      size="40"
+                      stroke="4"
+                      stroke-length="0.15"
+                      bg-opacity="0.1"
+                      speed="1.5"
+                      color="white"></l-infinity>
+                  ) : (
+                    "Envoyer"
+                  )}
                 </button>
               </div>
             </form>
@@ -298,7 +340,12 @@ const Contact = () => {
         </div>
       </div>
       {/* Modal */}
-      <div className={`modal ${isModalOpen ? "modal-visible" : ""}`}>
+      <div
+        className={`modal ${isModalOpen ? "modal-visible" : ""}`}
+        ref={modalRef}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}>
         <div className="modal-content">
           <i className="bx bx-x modal-close" onClick={closeModal}></i>
           <h3 className="modal-title">Message envoyé !</h3>

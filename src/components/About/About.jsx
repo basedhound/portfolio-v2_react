@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { Reveal, SlideReveal } from "../../utils/Reveal";
 import { Typewriter } from "react-simple-typewriter";
 import "./about.css";
@@ -16,30 +16,30 @@ const About = () => {
           <img src={img.about} alt="" className="about__img" />
           <div className="about__data">
             <div className="about__info">
-              <motion.div
+              <m.div
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.5 }}
                 className="about__box">
                 <i className="bx bx-award about__icon"></i>
                 <h3 className="about__title">Expérience</h3>
                 <span className="about__subtitle">3 ans</span>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.75 }}
                 className="about__box">
                 <i className="bx bx-briefcase-alt about__icon"></i>
                 <h3 className="about__title">Réalisé</h3>
                 <span className="about__subtitle"> + de 30 Projets</span>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 1 }}
                 className="about__box">
                 <i className="bx bx-support about__icon"></i>
                 <h3 className="about__title">Support</h3>
                 <span className="about__subtitle">Professionnel</span>
-              </motion.div>
+              </m.div>
             </div>
             <p className="about__description">
               <Typewriter
@@ -54,9 +54,11 @@ const About = () => {
                 delaySpeed={1500}
               />
             </p>
-            <a href="#contact" className="button">
-              Contact
-            </a>
+            <div className="about__button--wrap">
+              <a href="#contact" className="button">
+                Contact
+              </a>
+            </div>
           </div>
         </div>
       </SlideReveal>

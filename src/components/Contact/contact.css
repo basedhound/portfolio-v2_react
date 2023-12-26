@@ -81,7 +81,6 @@
 }
 .contact__button-icon {
   font-size: 1rem;
-  transition: 0.4s;
 }
 .contact__form-div {
   position: relative;
@@ -133,30 +132,11 @@
 .contact__form-area textarea {
   resize: none;
 }
-.contact__sendButton-wrap {
-  width: auto;
+.contact__formButton-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact__sendButton-wrap p {
-  margin-top: 1rem;
-}
-
-/* ========= Modal ========= */
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
 
 /* For medium devices */

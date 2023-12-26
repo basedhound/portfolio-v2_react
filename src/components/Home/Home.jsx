@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { Reveal } from "../../utils/Reveal";
 import img from "../../assets/img";
 import "./home.css";
@@ -39,7 +39,7 @@ const Home = () => {
               />
             </h3>
             <div className="home__buttons">
-              <motion.div
+              <m.div
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.5 }}>
                 <a
@@ -49,14 +49,14 @@ const Home = () => {
                   className="button button--ghost">
                   Mon CV
                 </a>
-              </motion.div>
-              <motion.div
+              </m.div>
+              <m.div
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 1 }}>
                 <a href="#contact" className="button">
                   Contact
                 </a>
-              </motion.div>
+              </m.div>
             </div>
           </div>
           <div className="home__handle">

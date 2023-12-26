@@ -8,8 +8,10 @@
   justify-self: center;
 }
 .about__data {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
 .about__info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -17,6 +19,9 @@
   margin-bottom: 2rem;
 }
 .about__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--container-color);
   border-radius: 0.75rem;
   padding: 0.75rem 0.5rem;
@@ -33,42 +38,40 @@
   font-size: var(--tiny-font-size);
 }
 .about__description {
-  margin-bottom: 2rem;
-  height: 75px;
+  margin-bottom: 1rem;
+}
+.about__button--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
-
 /* For small devices */
 @media (width <=320px) {
   .about__info {
     grid-template-columns: repeat(2, 1fr);
   }
-  .about__description {
-  margin-bottom: 2rem;
-  height: 150px;
 }
-  }
-
-
 /* For medium devices */
-@media (width >= 576px) {  
-    .about__info {
-      grid-template-columns: repeat(3, 140px);
-      justify-content: center;
-    }
-    .about__description {
-      padding: 0 5rem;
-    }  
+@media (width >= 576px) {
+  .about__info {
+    grid-template-columns: repeat(3, 140px);
+    justify-content: center;
+  }
+  .about__description {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
 }
 
-  /* For large devices */
+/* For large devices */
 @media (width >= 992px) {
- .about__container {
+  .about__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     -moz-column-gap: 4rem;
-         column-gap: 4rem;
+    column-gap: 4rem;
   }
   .about__img {
     width: 350px;
@@ -84,8 +87,10 @@
     padding: 1rem 1.25rem;
   }
   .about__description {
-    padding: 0 4rem 0 0;
-    margin-bottom: 2.5rem;
+    padding-left: 0rem;
+    padding-right: 3rem;
+  }
+  .about__button--wrap {
+    align-items: start;
   }
 }
-
