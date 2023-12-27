@@ -14,8 +14,8 @@ const Testimonials = () => {
   return (
     <section className="testimonial section">
       <Reveal>
-        <span className="section__subtitle">My clients say</span>
-        <h2 className="section__title">Testimonial</h2>
+        <span className="section__subtitle">Reviews</span>
+        <h2 className="section__title">Votre avis compte</h2>
       </Reveal>
 
       <SlideReveal>

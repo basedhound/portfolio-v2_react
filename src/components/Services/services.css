@@ -9,6 +9,8 @@
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
 }
 .services__card:hover .services__icon {
   animation: slideRight 1s infinite;

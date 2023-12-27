@@ -1,12 +1,33 @@
 /*=============== ABOUT ===============*/
 .about__container {
   row-gap: 2.5rem;
+  perspective: 1000px;
 }
+
 .about__img {
   width: 220px;
   border-radius: 1.5rem;
   justify-self: center;
+  transform: rotateY(15deg);
+  transition: transform 0.3s ease-in-out;
+  animation: hue-change 4s infinite linear;
 }
+@keyframes hue-change {
+  0% {
+    filter: hue-rotate(225deg);
+  }
+  50% {
+    filter: hue-rotate(255deg);
+  }
+  100% {
+    filter: hue-rotate(225deg);
+  }
+}
+.about__img:hover {
+  transform: rotateY(5deg);
+}
+
+
 .about__data {
   display: flex;
   flex-direction: column;

@@ -24,16 +24,63 @@
   padding: 0.25rem 0.75rem;
   font-weight: var(--font-medium);
   border-radius: 0.5rem;
+  position: relative;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.work__filter:hover {
+  opacity: 1;
+}
+.active-filter {
+  background-color: var(--first-color);
+  color: var(--body-color);
+  transition: 0.4s;
+  opacity: 1;
+}
+.active-filter:hover {
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
 }
 .work__card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--container-color);
   padding: 1rem;
   border-radius: 1rem;
   max-width: 275px;
+  opacity: 0.8;
+  transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.work__card:hover {
+  scale: 1.01;
+  opacity: 1;
+  animation: rotateCard 0.5s infinite linear;
+}
+.work__card:hover .work__img {
+  filter: grayscale(0%);
+}
+@keyframes rotateCard {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(-4deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(4deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
 }
 .work__img {
   border-radius: 1rem;
   margin-bottom: 0.75rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
 }
 .work__title {
   font-size: var(--normal-font-size);
@@ -44,11 +91,6 @@
   display: flex;
   flex-direction: row;
 }
-
-.work__links a {
-  margin-right: 1rem;
-}
-
 .work__button {
   width: -moz-max-content;
   width: max-content;
@@ -58,26 +100,21 @@
   align-items: center;
   -moz-column-gap: 0.25rem;
   column-gap: 0.25rem;
+  margin-right: 1.25rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.work__button:hover {
+  opacity: 1;
+  animation-play-state: paused;
 }
 .work__button:hover .work__icon {
-  transform: translateX(0.25rem);
+  transform: translateX(0.15rem);
 }
 .work__icon {
   font-size: 1rem;
-  transition: 0.4s;
+  transition: 0.3s;
 }
-
-/* Active item work*/
-.active-filter {
-  background-color: var(--first-color);
-  color: var(--body-color);
-  transition: 0.4s;
-}
-.active-filter:hover {
-  background-color: var(--first-color-alt);
-  color: var(--body-color);
-}
-
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
 
 /* For small devices */

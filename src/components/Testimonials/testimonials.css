@@ -6,11 +6,17 @@
   margin-bottom: 3rem;
   cursor: pointer;
 }
+.testimonial__card:hover .testimonial__img {
+  filter: grayscale(0%);
+}
 .testimonial__img {
   width: 60px;
   border-radius: 3rem;
   margin-bottom: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
 }
+
 .testimonial__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -29,7 +35,6 @@
   background-color: var(--first-color);
 }
 
-
 /*=============== BREAKPOINTS / MEDIAQUERIES ===============*/
 
 /* For large devices */
@@ -41,4 +46,3 @@
     padding: 1.5rem 2rem;
   }
 }
-

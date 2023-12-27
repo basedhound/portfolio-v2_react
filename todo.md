@@ -1,3 +1,5 @@
+Buttons : https://www.proglobalbusinesssolutions.com/css-hover-effects/
+
 # Right now
 
 - Finir cartes : ajouter descriptions des services
@@ -16,6 +18,7 @@ Grid : Virer la classe "grid" et intégrer display:grid aux éléments qui l'uti
 # LATER
 
 - CV : Retravailler CV pour bouton Home fonctionnel
+- 
 - CV : Créer une nouvelle page qui sera le CV avec un super design à la manière de certaines vidéos de Bedimcode
 
 - SECTION CERTIFICATS : Copier section skills pour une section certificats. Faire 2 blocs pour certificats. Dans skills faire un 4eme bloc pour les soft skills
@@ -30,6 +33,4 @@ Grid : Virer la classe "grid" et intégrer display:grid aux éléments qui l'uti
 
 - HOME PARALLAX : Magnifique parallax responsive dans le Home, à la place de mon illustration manga/photo
 
-- ICONES : Héberger localement ?
-
-- WORK - CSS : Ajouter Cathegorie du projet sur les cartes genre #Next13, une animation qui se declenches en cliquant un bouton de la carte ou hover, et qui fait glisser un petit volet d'info avec le nom des techs
+- WORK - CSS : Ajouter Categorie du projet sur les cartes genre #Next13, une animation qui se declenches en cliquant un bouton de la carte ou hover, et qui fait glisser un petit volet d'info avec le nom des techs
