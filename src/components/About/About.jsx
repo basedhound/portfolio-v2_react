@@ -49,6 +49,7 @@ const About = () => {
                 loop={1}
                 cursor
                 cursorStyle="_"
+                onDelay={1000}
                 typeSpeed={20}
                 deleteSpeed={50}
                 delaySpeed={1500}

@@ -9,8 +9,9 @@
   border-radius: 1.5rem;
   justify-self: center;
   transform: rotateY(15deg);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s, box-shadow 0.5s;
   animation: hue-change 4s infinite linear;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @keyframes hue-change {
   0% {
@@ -25,14 +26,12 @@
 }
 .about__img:hover {
   transform: rotateY(5deg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-
 .about__data {
   display: flex;
   flex-direction: column;
 }
-
 .about__info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -46,6 +45,11 @@
   background-color: var(--container-color);
   border-radius: 0.75rem;
   padding: 0.75rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: box-shadow 0.3s;
+}
+.about__box:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
 }
 .about__icon {
   font-size: 1.5rem;

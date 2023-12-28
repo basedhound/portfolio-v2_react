@@ -29,18 +29,39 @@
   font-size: 1.25rem;
   transition: 0.4s;
   margin-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.contact__social-link i {
+  animation: glowing 2s infinite;
+}
+@keyframes glowing {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .contact__social-link:hover {
   background-color: var(--first-color);
   color: #fff;
 }
+
 .contact__card {
   background-color: var(--container-color);
   padding: 0.8rem;
   border-radius: 0.75rem;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: box-shadow 0.5s;
 }
-.contact__card:hover .contact__button-icon{
+.contact__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contact__card:hover .contact__button-icon {
   animation: slideRight 1s infinite;
 }
 @keyframes slideRight {
@@ -105,15 +126,17 @@
   transition: border-color 0.5s, box-shadow 0.5s;
 }
 /* Input field colors */
-.contact__form-input:focus{
+.contact__form-input:focus {
   border-color: var(--first-color-alt);
   box-shadow: 0 1px 10px var(--first-color-alt);
 }
-.valid, .valid:focus {
+.valid,
+.valid:focus {
   border-color: green;
   box-shadow: 0 1px 10px green;
 }
-.invalid, .invalid:focus {
+.invalid,
+.invalid:focus {
   border-color: hsl(353, 64%, 53%);
   box-shadow: 0 1px 10px hsl(353, 64%, 53%);
 }

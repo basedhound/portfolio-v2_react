@@ -1,3 +1,10 @@
+/*=============== MORE ===============*/
+/* 3 Levels of box */
+/* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
+
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*=============== VARIABLES CSS ===============*/
@@ -119,8 +126,8 @@ Color changes : id or classlist are both valid methods
 body#light {
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 8%, 35%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
-  --container-color: #fff;
+  --body-color: #f1f2f6;
+  --container-color: #f1f2f6;
 }
 #light .scroll-header {
   box-shadow: 0 2px 4px hsla(0, 0%, 1%, 0.1);

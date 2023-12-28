@@ -60,27 +60,27 @@ const Header = () => {
         </ul>
         <div className="nav__menu">
           <ul className="nav__list">
-            <li className="nav__item">
+            <li>
               <a
                 href="#home"
-                title="Home"
+                title="Accueil"
                 className={`nav__link ${
                   activeLink === "home" ? "active-link" : ""
                 }`}>
                 <i className="bx bx-home-alt nav__icon"></i>
               </a>
             </li>
-            <li className="nav__item">
+            <li>
               <a
                 href="#about"
-                title="About"
+                title="Intro"
                 className={`nav__link ${
                   activeLink === "about" ? "active-link" : ""
                 }`}>
                 <i className="bx bx-user nav__icon"></i>
               </a>
             </li>
-            <li className="nav__item">
+            <li>
               <a
                 href="#skills"
                 title="Skills"
@@ -90,17 +90,17 @@ const Header = () => {
                 <i className="bx bx-book nav__icon"></i>
               </a>
             </li>
-            <li className="nav__item">
+            <li>
               <a
                 href="#work"
-                title="Work"
+                title="Projets"
                 className={`nav__link ${
                   activeLink === "work" ? "active-link" : ""
                 }`}>
                 <i className="bx bx-briefcase-alt-2 nav__icon"></i>
               </a>
             </li>
-            <li className="nav__item">
+            <li>
               <a
                 href="#contact"
                 title="Contact"

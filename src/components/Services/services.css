@@ -9,11 +9,34 @@
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s, box-shadow 0.3s;
+}
+.services__card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: rotateServiceCard 1s infinite linear;
+  opacity: 1;
 }
 .services__card:hover .services__icon {
   animation: slideRight 1s infinite;
+}
+@keyframes rotateServiceCard {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(-7deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(7deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
 }
 @keyframes slideRight {
   0% {

@@ -6,8 +6,8 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <Reveal>
-      <section className="home section" id="home">
+    <section className="home section" id="home">
+        <Reveal>
         <div className="home__container container grid">
           <div className="home__data">
             <h1 className="home__name">
@@ -71,8 +71,8 @@ const Home = () => {
             <span className="home__scroll-name">Scroll Down</span>
           </a>
         </div>
-      </section>
     </Reveal>
+      </section>
   );
 };
 

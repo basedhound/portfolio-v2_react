@@ -1,24 +1,26 @@
-Buttons : https://www.proglobalbusinesssolutions.com/css-hover-effects/
 
 # Right now
 
-- Finir cartes : ajouter descriptions des services
+- Grid : Virer la classe "grid" et intégrer display:grid aux éléments qui l'utilisent pour meilleure maintenabilité
+  
+- Finir cartes : ajouter descriptions des services, chatGPT
 
-- MAPPER ? : navbar, contact card
-- Mediaqueries : Repenser le responsive en termes de breakpoints/mediaqueries
+- GitHub/Readme : Faire un modèle de README type, réplicable pour les différents projets (site + copilot?)
 
-- Peaufiner esthétique avec des animations modernes/subtiles
+- Sélection de projets à présenter 
 
-- Work Cards : changements de couleur en surbrillance (noir et blanc, voir dernier portfolio bedimcode)
 
-- GitHub/Readme : Faire première sélection de projets, travailler sur un model de README, pimper GitHub
-
-Grid : Virer la classe "grid" et intégrer display:grid aux éléments qui l'utilisent pour meilleure maintenabilité
 
 # LATER
 
+- BOUTONS : Nouveaux https://www.proglobalbusinesssolutions.com/css-hover-effects/
+
+- MAPPER ? : navbar, contact card
+  
+- Mediaqueries : Repenser le responsive en termes de breakpoints/mediaqueries
+  
 - CV : Retravailler CV pour bouton Home fonctionnel
-- 
+  
 - CV : Créer une nouvelle page qui sera le CV avec un super design à la manière de certaines vidéos de Bedimcode
 
 - SECTION CERTIFICATS : Copier section skills pour une section certificats. Faire 2 blocs pour certificats. Dans skills faire un 4eme bloc pour les soft skills

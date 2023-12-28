@@ -64,22 +64,24 @@ const Work = () => {
         {projects.map((project) => (
           <SlideReveal key={project.id}>
             <div className="work__card mix web">
-              <img src={project.img} alt="" className="work__img" />
-              <h3 className="work__title">{project.name}</h3>
-              <div className="work__links">
-                <a
-                  href={project.link}
-                  className="work__button"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                    
-                  Live
-                  <i className="bx bx-right-arrow-alt work__icon"></i>
-                </a>
-                <a href={project.link} className="work__button" target="_blank">
-                  Github
-                  <i className="bx bx-right-arrow-alt work__icon"></i>
-                </a>
+              <div className="work__img--wrap"><img src={project.img} alt="" className="work__img" /></div>
+              <div className="work__details">
+                <h3 className="work__title">{project.name}</h3>
+                <div className="work__links">
+                  <a
+                    href={project.link}
+                    className="work__button"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                
+                    Demo
+                    <i className="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+                  <a href={project.link} className="work__button" target="_blank">
+                    Github
+                    <i className="bx bx-right-arrow-alt work__icon"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </SlideReveal>

@@ -5,9 +5,17 @@
   border-radius: 1.5rem;
   margin-bottom: 3rem;
   cursor: pointer;
+  opacity: 0.8;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s;
+}
+.testimonial__card:hover {
+  opacity: 1;
+  animation: rotateTestimonialCard 1s infinite linear;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .testimonial__card:hover .testimonial__img {
-  filter: grayscale(0%);
+  filter: none;
 }
 .testimonial__img {
   width: 60px;
