@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://portfolio-v2-fv.netlify.app" target="_blank">
-      <img src="/public/preview.webp" alt="Project Banner">
+      <img src="/public/design/preview.webp" alt="Project Banner">
     </a>
   <h3 align="center">Portfolio v2</h3>
 </div>
@@ -83,4 +83,4 @@ npm run dev
 yarn dev
 ```
 
-Open [`http://localhost:3000`](http://localhost:3000) in your browser to view the project.
+Open [`http://localhost:5173`](http://localhost:5173) in your browser to view the project.
