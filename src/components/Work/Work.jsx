@@ -20,11 +20,15 @@ const Work = () => {
 
   // Handle filters buttons
   const handleFilter = (category) => {
+    if (activeFilter === category) {
+      return;
+    }
+
     let filteredData = [];
     if (category === "Favs") {
-      filteredData = data.filter((item) => item.fav === true);
+      filteredData = [data.filter((item) => item.fav === true)];
     } else {
-      filteredData = data.filter((item) => item.cat === category);
+      filteredData = [data.filter((item) => item.cat === category)];
     }
     setProjects(filteredData);
     setActiveFilter(category);
