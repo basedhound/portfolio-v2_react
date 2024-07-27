@@ -45,7 +45,8 @@ const Home = () => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="/pdf/Ansel-Cv.pdf"
+                  href="/pdf/draft
+                  .pdf"
                   className="button button--ghost">
                   Mon CV
                 </a>
