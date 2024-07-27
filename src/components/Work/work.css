@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  min-height: 30vh;
 }
 .work__filters {
   display: flex;
