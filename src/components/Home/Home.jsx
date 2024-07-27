@@ -7,7 +7,7 @@ import "./home.css";
 const Home = () => {
   return (
     <section className="home section" id="home">
-        <Reveal>
+      <Reveal>
         <div className="home__container container grid">
           <div className="home__data">
             <h1 className="home__name">
@@ -40,6 +40,7 @@ const Home = () => {
             </h3>
             <div className="home__buttons">
               <m.div
+                viewport={{ once: true }}
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.5 }}>
                 <a
@@ -52,6 +53,7 @@ const Home = () => {
                 </a>
               </m.div>
               <m.div
+                viewport={{ once: true }}
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 1 }}>
                 <a href="#contact" className="button">
@@ -72,8 +74,8 @@ const Home = () => {
             <span className="home__scroll-name">Scroll Down</span>
           </a>
         </div>
-    </Reveal>
-      </section>
+      </Reveal>
+    </section>
   );
 };
 
