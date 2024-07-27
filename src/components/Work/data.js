@@ -44,6 +44,14 @@ const data = [
     cat: "Mobile",
     fav: true,
   },
+  {
+    id: 6,
+    name: "Test 6",
+    img: img.work1,
+    link: "https://github.com/basedhound",
+    cat: "Design",
+    fav: true,
+  },
 ];
 
 export default data;
