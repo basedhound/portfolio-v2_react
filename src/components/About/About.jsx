@@ -17,6 +17,7 @@ const About = () => {
           <div className="about__data">
             <div className="about__info">
               <m.div
+                viewport={{ once: true }}
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.5 }}
                 className="about__box">
@@ -25,6 +26,7 @@ const About = () => {
                 <span className="about__subtitle">3 ans</span>
               </m.div>
               <m.div
+                viewport={{ once: true }}
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 0.75 }}
                 className="about__box">
@@ -33,6 +35,7 @@ const About = () => {
                 <span className="about__subtitle"> + de 30 Projets</span>
               </m.div>
               <m.div
+                viewport={{ once: true }}
                 whileInView={{ opacity: [0, 1], x: [100, 0] }}
                 transition={{ duration: 0.25, delay: 1 }}
                 className="about__box">
