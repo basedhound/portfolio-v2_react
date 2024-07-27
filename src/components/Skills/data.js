@@ -57,7 +57,7 @@ export const certifsData = [
     cat: "Certificats",
     name1: "Web Developer",
     desc1: "OpenClassrooms | 2022",
-    link1: "/pdf/certif-oc-webdev.pdf",
+    link1: "/pdf/certif-1.pdf",
     name2: "Responsive Design",
     desc2: "FreeCodeCamp | 2023",
     link2: "",
