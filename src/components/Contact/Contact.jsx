@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { motion as m } from "framer-motion";
 import { infinity } from "ldrs";
-import { Reveal, SlideReveal } from "../../utils/Reveal";
+import { Reveal } from "../../utils/Reveal";
 import "./contact.css";
 import "../../assets/css/modal.css";
 
