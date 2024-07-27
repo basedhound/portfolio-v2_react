@@ -106,7 +106,7 @@ const Contact = () => {
       e.target.classList.remove("valid");
       setIsValid(false);
     }
-    // If the input field is empty, remove classes
+    // Remove classes if the input field is empty
     if (value === "") {
       e.target.classList.remove("invalid");
       e.target.classList.remove("valid");
