@@ -171,7 +171,7 @@ const Contact = () => {
         <ul className="contact__social-list">
           <li>
             <a
-              href="https://www.linkedin.com/"
+              href="https://github.com/basedhound"
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-github"></i>
@@ -179,7 +179,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/frankdev/"
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-linkedin-square"></i>
@@ -187,7 +187,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/"
+              href="https://m.me/frank.vkh"
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-facebook-square"></i>
@@ -195,7 +195,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/"
+              href="https://wa.me/+330779134587"
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-whatsapp"></i>
@@ -203,7 +203,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/"
+              href="https://ig.me/m/frank.vkh"
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-instagram"></i>
@@ -215,6 +215,7 @@ const Contact = () => {
         <div className="contact__content">
           <div className="contact__info">
             <m.div
+              viewport={{ once: true }}
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.25 }}
               className="contact__card">
@@ -233,6 +234,7 @@ const Contact = () => {
             </m.div>
 
             <m.div
+              viewport={{ once: true }}
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.5 }}
               className="contact__card">
@@ -249,6 +251,7 @@ const Contact = () => {
             </m.div>
 
             <m.div
+              viewport={{ once: true }}
               whileInView={{ opacity: [0, 1], x: [-100, 0] }}
               transition={{ duration: 0.25, delay: 0.75 }}
               className="contact__card">
