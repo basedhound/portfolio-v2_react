@@ -5,32 +5,49 @@
   <h3 align="center">Portfolio v2</h3>
 </div>
 
-##  <br /> 📋 <a name="table">Table of Contents</a>
+## <br /> 📋 <a name="table">Table of Contents</a>
 
 - ✨ [Introduction](#introduction)
 - ⚙️ [Tech Stack](#tech-stack)
 - 📝 [Features](#features)
 - 🚀 [Quick Start](#quick-start)
 
-##  <br /> <a name="introduction">✨ Introduction</a>
+## <br /> <a name="introduction">✨ Introduction</a>
 
-**[EN]** 
+**[EN]** A modern and minimalist portfolio website crafted using React and Vite. The site features smooth animations powered by Framer Motion, a responsive carousel implemented with the Swiper library, and also typewriter effect which adds a dynamic touch to the text elements. Additionally, dynamic filtering and sorting enhance the usability of the portfolio. For communication, EmailJS is integrated to enable direct contact using the form.
 
-**[FR]** 
+**[FR]** Un portfolio moderne et minimaliste réalisé avec React et Vite. Le site intègre des animations fluides grâce à Framer Motion, un carrousel réactif implémenté avec la bibliothèque Swiper, ainsi qu'un effet de machine à écrire qui ajoute une touche dynamique aux éléments textuels. Le filtrage ainsi que le tri dynamiques améliorent l'utilisation du portfolio. Pour la communication, EmailJS est intégré pour permettre un contact direct via le formulaire.
 
-##  <br /> <a name="tech-stack">⚙️ Tech Stack</a>
+## <br /> <a name="tech-stack">⚙️ Tech Stack</a>
 
-- **React** is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes over time. React's component-based architecture allows developers to create reusable UI components, making development more efficient and the codebase easier to maintain. 
+- **React** is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes over time. React's component-based architecture allows developers to create reusable UI components, making development more efficient and the codebase easier to maintain.
 
 - **Framer Motion** is a React animation library designed for creating smooth, interactive animations and transitions. It simplifies complex animations with a straightforward API, supports gesture-based interactions, and offers physics-based animations for realistic motion effects.
 
-- Sanity 
+- **Typewriter Effect** is a common animation technique used to create a typing animation, where text appears on the screen as if it is being typed in real time. In React, this can be achieved using various libraries or custom code to enhance the user experience by adding dynamic and engaging text elements.
 
-- Sass
+- **EmailJS** is a service that enables developers to send emails directly from JavaScript applications without requiring server-side code. It supports various email service providers and allows integration with forms to send emails directly from the web application, making it ideal for contact forms and user feedback.
 
+- **Swiper** is a modern touch slider library that provides a highly customizable and responsive carousel for web applications. It supports touch gestures, mouse interactions, and a wide range of features like lazy loading, parallax effects, and multiple slide layouts, making it a versatile choice for implementing carousels and sliders.
+
+- **Vite** is a next-generation front-end build tool that focuses on speed and performance. It provides a fast development environment with instant hot module replacement (HMR) and optimized production builds. Vite's native support for modern JavaScript and its plugin ecosystem make it a powerful choice for developing modern web applications.
 
 ## <br/> <a name="features">📝 Features</a>
+👉 **Responsive Design**: Fully functional and visually appealing across all devices and screen sizes.
 
+👉 **Dynamic UI Components**: Interactive and engaging user interface elements built with React.
+
+👉 **Smooth Animations**: Powered by Framer Motion for an engaging user experience.
+
+👉 **Responsive Carousel**: Implemented with the Swiper library for seamless navigation.
+
+👉 **Typewriter Effect**: Adds a dynamic touch to text elements, enhancing interactivity.
+
+👉 **Dynamic Filtering and Sorting**: Enhances usability by allowing easy portfolio management.
+
+👉 **Direct Contact Form**: Integrated with EmailJS to enable direct communication through the form.
+
+👉 **Fast Development**: Built with Vite for a speedy and efficient development process.
 
 ## <br /> <a name="quick-start">🚀 Quick Start</a>
 
@@ -70,8 +87,7 @@ VITE_EJS_KEY=
 
 Replace the placeholder values with your actual respective account credentials:
 
-- [Sanity.io](https://www.sanity.io/manage )
-
+- [EmailJs](https://www.emailjs.com/)
 
 <br/>**Running the Project**
 
