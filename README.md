@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://portfolio-v2-fv.netlify.app" target="_blank">
-      <img src="/public/design/preview.webp" alt="Project Banner">
+      <img src="/public/design/preview.png" alt="Project Banner">
     </a>
   <h3 align="center">Portfolio v2</h3>
 </div>
@@ -20,17 +20,17 @@
 
 ## <br /> <a name="tech-stack">⚙️ Tech Stack</a>
 
-- **React** is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes over time. React's component-based architecture allows developers to create reusable UI components, making development more efficient and the codebase easier to maintain.
+- [**React**](https://react.dev/reference/react) is a popular JavaScript library for building user interfaces, particularly single-page applications where data changes over time. React's component-based architecture allows developers to create reusable UI components, making development more efficient and the codebase easier to maintain.
 
-- **Framer Motion** is a React animation library designed for creating smooth, interactive animations and transitions. It simplifies complex animations with a straightforward API, supports gesture-based interactions, and offers physics-based animations for realistic motion effects.
+- [**Framer Motion**](https://www.framer.com/motion/) is a React animation library designed for creating smooth, interactive animations and transitions. It simplifies complex animations with a straightforward API, supports gesture-based interactions, and offers physics-based animations for realistic motion effects.
 
-- **Typewriter Effect** is a common animation technique used to create a typing animation, where text appears on the screen as if it is being typed in real time. In React, this can be achieved using various libraries or custom code to enhance the user experience by adding dynamic and engaging text elements.
+- [**Typewriter Effect**](https://www.npmjs.com/package/react-simple-typewriter) is a common animation technique used to create a typing animation, where text appears on the screen as if it is being typed in real time. In React, this can be achieved using various libraries or custom code to enhance the user experience by adding dynamic and engaging text elements.
 
-- **EmailJS** is a service that enables developers to send emails directly from JavaScript applications without requiring server-side code. It supports various email service providers and allows integration with forms to send emails directly from the web application, making it ideal for contact forms and user feedback.
+- [**EmailJS**](https://www.emailjs.com/docs/) is a service that enables developers to send emails directly from JavaScript applications without requiring server-side code. It supports various email service providers and allows integration with forms to send emails directly from the web application, making it ideal for contact forms and user feedback.
 
-- **Swiper** is a modern touch slider library that provides a highly customizable and responsive carousel for web applications. It supports touch gestures, mouse interactions, and a wide range of features like lazy loading, parallax effects, and multiple slide layouts, making it a versatile choice for implementing carousels and sliders.
+- [**Swiper**](https://swiperjs.com/react) is a modern touch slider library that provides a highly customizable and responsive carousel for web applications. It supports touch gestures, mouse interactions, and a wide range of features like lazy loading, parallax effects, and multiple slide layouts, making it a versatile choice for implementing carousels and sliders.
 
-- **Vite** is a next-generation front-end build tool that focuses on speed and performance. It provides a fast development environment with instant hot module replacement (HMR) and optimized production builds. Vite's native support for modern JavaScript and its plugin ecosystem make it a powerful choice for developing modern web applications.
+- [**Vite**](https://vitejs.dev/guide/) is a next-generation front-end build tool that focuses on speed and performance. It provides a fast development environment with instant hot module replacement (HMR) and optimized production builds. Vite's native support for modern JavaScript and its plugin ecosystem make it a powerful choice for developing modern web applications.
 
 ## <br/> <a name="features">📝 Features</a>
 👉 **Responsive Design**: Fully functional and visually appealing across all devices and screen sizes.
