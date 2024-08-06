@@ -26,7 +26,7 @@
 
 - [**Typewriter Effect**](https://www.npmjs.com/package/react-simple-typewriter) is a common animation technique used to create a typing animation, where text appears on the screen as if it is being typed in real time. In React, this can be achieved using various libraries or custom code to enhance the user experience by adding dynamic and engaging text elements.
 
-- [**EmailJS**](https://www.emailjs.com/docs/) is a service that enables developers to send emails directly from JavaScript applications without requiring server-side code. It supports various email service providers and allows integration with forms to send emails directly from the web application, making it ideal for contact forms and user feedback.
+- [**EmailJS**](https://www.emailjs.com/docs/examples/reactjs/) is a service that enables developers to send emails directly from JavaScript applications without requiring server-side code. It supports various email service providers and allows integration with forms to send emails directly from the web application, making it ideal for contact forms and user feedback.
 
 - [**Swiper**](https://swiperjs.com/react) is a modern touch slider library that provides a highly customizable and responsive carousel for web applications. It supports touch gestures, mouse interactions, and a wide range of features like lazy loading, parallax effects, and multiple slide layouts, making it a versatile choice for implementing carousels and sliders.
 
