@@ -12,7 +12,7 @@ const Home = () => {
           <div className="home__data">
             <h1 className="home__name">
               <Typewriter
-                words={["Frank Vukelić"]}
+                words={["My Portfolio"]}
                 loop={1}
                 typeSpeed={100}
                 deleteSpeed={50}

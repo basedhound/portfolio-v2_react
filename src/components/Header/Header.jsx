@@ -45,7 +45,7 @@ const Header = () => {
         <ul className="nav__social-list">
           <li>
             <a
-              href="https://www.github.com/basedhound"
+              href="https://www.github.com"
               target="_blank"
               title="GitHub"
               className="nav__social-link">

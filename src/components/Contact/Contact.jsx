@@ -171,7 +171,7 @@ const Contact = () => {
         <ul className="contact__social-list">
           <li>
             <a
-              href="https://github.com/basedhound"
+              href=""
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-github"></i>
@@ -179,7 +179,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/frankdev/"
+              href=""
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-linkedin-square"></i>
@@ -187,7 +187,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://m.me/frank.vkh"
+              href=""
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-facebook-square"></i>
@@ -195,7 +195,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://wa.me/+330779134587"
+              href=""
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-whatsapp"></i>
@@ -203,7 +203,7 @@ const Contact = () => {
           </li>
           <li>
             <a
-              href="https://ig.me/m/frank.vkh"
+              href=""
               target="_blank"
               className="contact__social-link">
               <i className="bx bxl-instagram"></i>
@@ -222,10 +222,10 @@ const Contact = () => {
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">
-                franck.vukelic@gmail.com
+                my-email@gmail.com
               </span>
               <a
-                href="mailto:franck.vukelic@gmail.com"
+                href=""
                 target="_blank"
                 className="contact__button">
                 Cliquez ici
@@ -239,10 +239,10 @@ const Contact = () => {
               transition={{ duration: 0.25, delay: 0.5 }}
               className="contact__card">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">+33 77 913 4587</span>
+              <h3 className="contact__card-title">WhatsApp</h3>
+              <span className="contact__card-data">My Number</span>
               <a
-                href="https://api.whatsapp.com/send?phone=33779134587&text=Hello, more information!"
+                href=""
                 target="_blank"
                 className="contact__button">
                 Cliquez ici
@@ -257,9 +257,9 @@ const Contact = () => {
               className="contact__card">
               <i className="bx bxl-linkedin-square contact__card-icon"></i>
               <h3 className="contact__card-title">Linkedin</h3>
-              <span className="contact__card-data">Frank Vukelić</span>
+              <span className="contact__card-data">My Name</span>
               <a
-                href="https://m.me/fvklc"
+                href=""
                 target="_blank"
                 className="contact__button">
                 Cliquez ici
